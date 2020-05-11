@@ -2,7 +2,7 @@
   "products": [
     {
       "name": "iPhone",
-      "price": 60000,
+      "price": 60001,
       "description": "Айфон 12",
       "owner": 1,
       "id": 1
@@ -16,7 +16,7 @@
     },
     {
       "name": "samsung",
-      "price": 1001,
+      "price": 1000,
       "description": "samsun",
       "owner": 1,
       "id": 3
