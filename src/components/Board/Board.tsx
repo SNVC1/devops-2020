@@ -1,7 +1,7 @@
-import React from 'react'
-import ProductCard from '../ProductCard'
-import Spinner from '../../components/Spinner'
-import * as S from './styled'
+import React from 'react';
+import ProductCard from '../ProductCard';
+import Spinner from '../../components/Spinner';
+import * as S from './styled';
 
 interface IBoardProps {
   fetchProducts: () => void
@@ -10,14 +10,14 @@ interface IBoardProps {
 }
 
 const Board: React.FC<IBoardProps> = (props) => {
-  const { fetchProducts, productList, isLoading } = props
+  const {fetchProducts, productList, isLoading} = props;
 
   React.useEffect(() => {
-    fetchProducts()
-  }, [])
+    fetchProducts();
+  }, []);
 
   if (isLoading) {
-    return <Spinner />
+    return <Spinner />;
   }
 
   return (
@@ -26,7 +26,7 @@ const Board: React.FC<IBoardProps> = (props) => {
         <ProductCard key={index} productId={productId} />
       ))}
     </S.BoardSection>
-  )
-}
+  );
+};
 
-export default Board
+export default Board;

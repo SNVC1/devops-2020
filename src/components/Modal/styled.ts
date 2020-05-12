@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components'
+import styled, {keyframes} from 'styled-components';
 
-import { Section } from '../styled'
+import {Section} from '../styled';
 
 const fade = keyframes`
   from {
@@ -10,7 +10,7 @@ const fade = keyframes`
   to {
     opacity: 1;
   }
-`
+`;
 
 const rise = keyframes`
   from {
@@ -20,7 +20,7 @@ const rise = keyframes`
   to {
     transform: scale(1);
   }
-`
+`;
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -35,7 +35,7 @@ export const Wrapper = styled.div`
   cursor: pointer;
   animation-name: ${fade};
   animation-duration: 0.5s;
-`
+`;
 
 export const Inner = styled.div`
   border-radius: 8px;
@@ -48,4 +48,4 @@ export const Inner = styled.div`
     border-radius: 8px;
     margin-top: 0;
   }
-`
+`;

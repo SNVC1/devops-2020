@@ -1,20 +1,20 @@
-import React from 'react'
-import { FormWrapper, FormItem } from '../styled'
+import React from 'react';
+import {FormWrapper, FormItem} from '../styled';
 
 interface ILoginProps {
   history: any
 }
 
 const Login: React.FC<ILoginProps> = (props) => {
-  const { history } = props
+  const {history} = props;
   const onSubmit = React.useCallback((event) => {
-    event.preventDefault()
-    window.localStorage.setItem('auth', '123')
+    event.preventDefault();
+    window.localStorage.setItem('auth', '123');
     if (history) {
-      history.push('')
-      window.location.reload()
+      history.push('');
+      window.location.reload();
     }
-  }, [])
+  }, []);
 
   return (
     <FormWrapper>
@@ -32,7 +32,7 @@ const Login: React.FC<ILoginProps> = (props) => {
         </button>
       </form>
     </FormWrapper>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

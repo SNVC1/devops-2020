@@ -1,5 +1,5 @@
-import React from 'react'
-import * as S from './styled'
+import React from 'react';
+import * as S from './styled';
 
 const Spinner: React.FC = () => {
   return (
@@ -9,7 +9,7 @@ const Spinner: React.FC = () => {
       <div></div>
       <div></div>
     </S.SpinnerWrapper>
-  )
-}
+  );
+};
 
-export default Spinner
+export default Spinner;

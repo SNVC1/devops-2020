@@ -2,9 +2,17 @@
 
 ---
 Последовательность команд для запуска приложения:
-1. `yarn` - устанавливает все зависимости
-2. `yarn start` - запускает приложение
+1. Установить все зависимости проекта согласно `package.json`
+```shell script
+yarn
+```
+2. Запустить приложение в режиме разработки
+```shell script
+yarn start
+```
 
-В качестве бэкенда используется json server.
-`yarn global add json-server`
-`json-server --watch db.json`
+В качестве бэкенда используется JSON сервер:
+```shell script
+yarn global add json-server
+json-server --watch db.json
+```

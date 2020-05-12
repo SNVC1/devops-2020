@@ -1,12 +1,12 @@
-import React from 'react'
-import { Provider } from 'react-redux'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import Board from './components/Board'
-import Header from './components/Header'
-import Product from './components/Product'
-import { ProductCreate } from './components/ProductForm'
-import Login from './components/Login'
-import initStore from './store'
+import React from 'react';
+import {Provider} from 'react-redux';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Board from './components/Board';
+import Header from './components/Header';
+import Product from './components/Product';
+import {ProductCreate} from './components/ProductForm';
+import Login from './components/Login';
+import initStore from './store';
 
 const App: React.FC = () => {
   return (
@@ -21,7 +21,7 @@ const App: React.FC = () => {
         </div>
       </Router>
     </Provider>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,7 +1,7 @@
-import React from 'react'
-import { useDropzone } from 'react-dropzone'
-import { FormWrapper, FormItem } from '../styled'
-import * as S from './styled'
+import React from 'react';
+import {useDropzone} from 'react-dropzone';
+import {FormWrapper, FormItem} from '../styled';
+import * as S from './styled';
 
 interface IProductCreate {
   history?: {
@@ -16,36 +16,36 @@ interface IProductCreate {
 }
 
 const ProductForm: React.FC<IProductCreate> = (props) => {
-  const { history, productSave, id, onSaveSuccess } = props
-  const [name, setName] = React.useState<string>(props.name || '')
-  const [price, setPrice] = React.useState<number>(props.price!)
+  const {history, productSave, id, onSaveSuccess} = props;
+  const [name, setName] = React.useState<string>(props.name || '');
+  const [price, setPrice] = React.useState<number>(props.price!);
   const [description, setDescription] = React.useState<string>(
-    props.description || ''
-  )
+      props.description || '',
+  );
 
-  const [image, setImage] = React.useState('')
+  const [image, setImage] = React.useState('');
 
   const onDrop = React.useCallback((acceptedFiles) => {
     if (acceptedFiles && acceptedFiles[0]) {
-      setImage(acceptedFiles[0].name)
+      setImage(acceptedFiles[0].name);
     }
-  }, [])
+  }, []);
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop })
+  const {getRootProps, getInputProps, isDragActive} = useDropzone({onDrop});
 
   const onSubmit = React.useCallback(
-    async (event) => {
-      event.preventDefault()
-      productSave({ name, price, description, id } as any)
-      if (onSaveSuccess) {
-        onSaveSuccess()
-      }
-      if (history) {
-        history.push('')
-      }
-    },
-    [name, price, description]
-  )
+      async (event) => {
+        event.preventDefault();
+        productSave({name, price, description, id} as any);
+        if (onSaveSuccess) {
+          onSaveSuccess();
+        }
+        if (history) {
+          history.push('');
+        }
+      },
+      [name, price, description],
+  );
 
   return (
     <FormWrapper>
@@ -93,7 +93,7 @@ const ProductForm: React.FC<IProductCreate> = (props) => {
         </button>
       </form>
     </FormWrapper>
-  )
-}
+  );
+};
 
-export default ProductForm
+export default ProductForm;

@@ -1,16 +1,16 @@
 import {
   FETCH_PRODUCTS_SUCCESS,
   FETCH_PRODUCTS,
-  FETCH_PRODUCT_SUCCESS
-} from '../actions/products'
+  FETCH_PRODUCT_SUCCESS,
+} from '../actions/products';
 
-const initialState: IProductState = {
+export const initialState: IProductState = {
   productList: [],
   products: {},
-  isLoading: false
-}
+  isLoading: false,
+};
 
-interface IAction {
+export interface IAction {
   type: string
   payload: {
     result: number[] | number
@@ -23,26 +23,26 @@ export default function(state = initialState, action: IAction) {
     case FETCH_PRODUCTS: {
       return {
         ...state,
-        isLoading: true
-      }
+        isLoading: true,
+      };
     }
     case FETCH_PRODUCT_SUCCESS:
       return {
         ...state,
         products: {
           ...state.products,
-          ...action.payload.entities.product
+          ...action.payload.entities.product,
         },
         productList: [action.payload.result as number],
-        isLoading: false
-      }
+        isLoading: false,
+      };
     case FETCH_PRODUCTS_SUCCESS:
       return {
         ...state,
         products: action.payload.entities.product,
         productList: action.payload.result as number[],
-        isLoading: false
-      }
+        isLoading: false,
+      };
   }
-  return state
+  return state;
 }

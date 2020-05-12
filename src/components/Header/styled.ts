@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const HeaderItem = styled.div`
   background-color: #5495df;
@@ -10,7 +10,7 @@ export const HeaderItem = styled.div`
     box-shadow: none;
     text-align: center;
   }
-`
+`;
 
 export const Header = styled.header`
   display: flex;
@@ -32,8 +32,8 @@ export const Header = styled.header`
     }
   }
   
-`
+`;
 
 export const LogoutButton = styled.a`
   cursor: pointer;
-`
+`;

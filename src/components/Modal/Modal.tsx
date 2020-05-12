@@ -1,5 +1,5 @@
-import React from 'react'
-import * as S from './styled'
+import React from 'react';
+import * as S from './styled';
 
 interface IModalProps {
   toggleModal: () => void
@@ -7,17 +7,17 @@ interface IModalProps {
 }
 
 const Modal: React.FC<any> = (props) => {
-  const { children, toggleModal, isOpen } = props
+  const {children, toggleModal, isOpen} = props;
 
   if (!isOpen) {
-    return null
+    return null;
   }
 
   return (
     <S.Wrapper onClick={() => toggleModal()}>
       <S.Inner onClick={(event) => event.stopPropagation()}>{children}</S.Inner>
     </S.Wrapper>
-  )
-}
+  );
+};
 
-export default Modal
+export default Modal;

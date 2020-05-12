@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import getIsAuth from '../../utils/getIsAuth'
-import * as S from './styled'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import getIsAuth from '../../utils/getIsAuth';
+import * as S from './styled';
 
 const Header: React.FC = () => {
   const onLogout = React.useCallback(() => {
-    window.localStorage.clear()
-    window.location.reload()
-  }, [])
-  
+    window.localStorage.clear();
+    window.location.reload();
+  }, []);
+
   return (
     <S.Header>
       <S.HeaderItem>
@@ -27,7 +27,7 @@ const Header: React.FC = () => {
         )}
       </S.HeaderItem>
     </S.Header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

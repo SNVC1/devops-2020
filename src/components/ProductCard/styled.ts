@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const BoardItem = styled.div`
   width: 140px;
@@ -17,14 +17,14 @@ export const BoardItem = styled.div`
     height: 140px;
     margin-bottom: 5px;
   }
-`
+`;
 
 export const Price = styled.div`
   font-size: 10px;
-`
+`;
 
 export const Title = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-`
+`;

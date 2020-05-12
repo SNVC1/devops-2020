@@ -1,9 +1,10 @@
-import React from 'react'
-import iPhone from '../../assets/iphone.jpg'
-import Spinner from '../Spinner'
-import Modal from '../Modal'
-import { ProductUpdate } from '../ProductForm'
-import * as S from './styled'
+import React from 'react';
+import Spinner from '../Spinner';
+import Modal from '../Modal';
+import {ProductUpdate} from '../ProductForm';
+import * as S from './styled';
+
+const iPhone = require('../../assets/iphone.jpg');
 
 export interface IProductStateProps {
   isLoading: boolean
@@ -29,16 +30,16 @@ interface IProductProps
     IProductOwnProps {}
 
 const Product: React.FC<IProductProps> = (props) => {
-  const { fetchProduct, match, isLoading, product, toggleModal } = props
+  const {fetchProduct, match, isLoading, product, toggleModal} = props;
   React.useEffect(() => {
-    fetchProduct(match.params.productId)
-  }, [])
+    fetchProduct(match.params.productId);
+  }, []);
 
   if (isLoading || !product) {
-    return <Spinner />
+    return <Spinner />;
   }
 
-  const { name, price, description } = product
+  const {name, price, description} = product;
 
   return (
     <S.Wrapper>
@@ -57,7 +58,7 @@ const Product: React.FC<IProductProps> = (props) => {
         />
       </Modal>
     </S.Wrapper>
-  )
-}
+  );
+};
 
-export default Product
+export default Product;

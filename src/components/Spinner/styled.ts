@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled, {keyframes} from 'styled-components';
 
 const ldsRing = keyframes`
   0% {
@@ -7,7 +7,7 @@ const ldsRing = keyframes`
   100% {
     transform: rotate(360deg);
   }
-`
+`;
 
 export const SpinnerWrapper = styled.div`
   position: relative;
@@ -36,4 +36,4 @@ export const SpinnerWrapper = styled.div`
   div:nth-child(3) {
     animation-delay: -0.15s;
   }
-`
+`;

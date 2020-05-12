@@ -1,18 +1,18 @@
-import { connect } from 'react-redux'
+import {connect} from 'react-redux';
 import ProductCard, {
   IProductStateCardProps,
-  IProductOwnCardProps
-} from './ProductCard'
+  IProductOwnCardProps,
+} from './ProductCard';
 
 function mapStateToProps(
-  state: IState,
-  props: IProductOwnCardProps
+    state: IState,
+    props: IProductOwnCardProps,
 ): IProductStateCardProps {
-  const { productId } = props
+  const {productId} = props;
 
   return {
-    product: state.products.products[productId]
-  }
+    product: state.products.products[productId],
+  };
 }
 
-export default connect(mapStateToProps)(ProductCard)
+export default connect(mapStateToProps)(ProductCard);

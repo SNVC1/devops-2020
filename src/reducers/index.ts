@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux'
-import products from './products'
-import modal from './modal'
+import {combineReducers} from 'redux';
+import products from './products';
+import modal from './modal';
 
-export default combineReducers({ products, modal })
+export default combineReducers({products, modal});

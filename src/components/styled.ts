@@ -1,11 +1,11 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 export const Section = styled.section`
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-`
+`;
 
 export const FormWrapper = styled(Section)`
   display: flex;
@@ -23,7 +23,7 @@ export const FormWrapper = styled(Section)`
       width: 100%;
     }
   }
-`
+`;
 
 export const FormItem = styled.div`
   display: flex;
@@ -42,4 +42,4 @@ export const FormItem = styled.div`
     border-radius: 2px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
   }
-`
+`;

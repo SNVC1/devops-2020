@@ -1,18 +1,18 @@
-import { connect } from 'react-redux'
-import { toggleModal } from '../../actions/modal'
-import Modal from './Modal'
+import {connect} from 'react-redux';
+import {toggleModal} from '../../actions/modal';
+import Modal from './Modal';
 
 function mapStateToProps(state: IState) {
   return {
-    isOpen: state.modal.isModalOpen
-  }
+    isOpen: state.modal.isModalOpen,
+  };
 }
 
 const mapDispatchToProps = {
-  toggleModal
-}
+  toggleModal,
+};
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Modal)
+    mapStateToProps,
+    mapDispatchToProps,
+)(Modal);

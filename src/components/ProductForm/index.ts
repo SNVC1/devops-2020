@@ -1,22 +1,22 @@
-import { connect } from 'react-redux'
-import { productCreate, productUpdate } from '../../actions/products'
+import {connect} from 'react-redux';
+import {productCreate, productUpdate} from '../../actions/products';
 
-import ProductForm from './ProductForm'
+import ProductForm from './ProductForm';
 
 const mapDispatchToPropsCreate = {
-  productSave: productCreate
-}
+  productSave: productCreate,
+};
 
 const mapDispatchToPropsUpdate = {
-  productSave: productUpdate
-}
+  productSave: productUpdate,
+};
 
 export const ProductCreate = connect(
-  null,
-  mapDispatchToPropsCreate
-)(ProductForm)
+    null,
+    mapDispatchToPropsCreate,
+)(ProductForm);
 
 export const ProductUpdate = connect(
-  null,
-  mapDispatchToPropsUpdate
-)(ProductForm)
+    null,
+    mapDispatchToPropsUpdate,
+)(ProductForm);

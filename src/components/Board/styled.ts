@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { Section } from '../styled'
+import styled from 'styled-components';
+import {Section} from '../styled';
 
 export const BoardSection = styled(Section)`
   display: flex;
@@ -9,4 +9,4 @@ export const BoardSection = styled(Section)`
   @media screen and (max-width: 800px) {
     justify-content: space-around;
   }
-`
+`;

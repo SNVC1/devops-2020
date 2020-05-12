@@ -1,7 +1,8 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import image from '../../assets/image.jpg'
-import * as S from './styled'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import * as S from './styled';
+
+const image = require('../../assets/image.jpg');
 
 export interface IProductStateCardProps {
   product: IProduct
@@ -16,12 +17,12 @@ interface IProductCardProps
     IProductOwnCardProps {}
 
 const ProductCard: React.FC<IProductCardProps> = (props) => {
-  const { product } = props
+  const {product} = props;
 
   if (!product) {
-    return null
+    return null;
   }
-  const { name, price, id } = product
+  const {name, price, id} = product;
 
   return (
     <Link to={`/product/${id}`}>
@@ -33,7 +34,7 @@ const ProductCard: React.FC<IProductCardProps> = (props) => {
         </div>
       </S.BoardItem>
     </Link>
-  )
-}
+  );
+};
 
-export default ProductCard
+export default ProductCard;
